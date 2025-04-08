@@ -105,3 +105,47 @@ tr:nth-child(even) {
     background-color: #eaf7fd;
     border-radius: 4px;
 }
+
+/* ... предыдущие стили остаются без изменений ... */
+
+.history-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.history-entry {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.history-entry:last-child {
+    border-bottom: none;
+}
+
+.history-time {
+    color: #6c757d;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.history-add {
+    color: #28a745;
+}
+
+.history-update {
+    color: #17a2b8;
+}
+
+.history-delete {
+    color: #dc3545;
+}
+
+.history-property {
+    color: #6f42c1;
+}
