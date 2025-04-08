@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+    <link rel="stylesheet" href="lab3.css">
+</head>
+<body>
+    <header>
+        <div class="language-switcher">
+            <button id="btn-ru" class="lang-btn active">Рус</button>
+            <button id="btn-en" class="lang-btn">Eng</button>
+        </div>
+        <h1 id="form-title">Форма для заполнения</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" id="nav1">Главная</a></li>
+            <li><a href="#" id="nav2">О нас</a></li>
+            <li><a href="#" id="nav3">Меню</a></li>
+            <li><a href="#" id="nav4">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2 id="section-title">Внесите, пожалуйста, данные</h2>
+        
+        <div class="form-group">
+            <label id="label1">ФИО:</label>
+            <input type="text" id="field1" autofocus>
+        </div>
+        
+        <div class="form-group">
+            <label id="label2">Пожелание к заказу:</label>
+            <input type="text" id="field2">
+        </div>
+        
+        <div class="form-group">
+            <label id="label3">Телефон:</label>
+            <input type="text" id="field3">
+        </div>
+        
+        <div class="form-group">
+            <label id="label4">Как ещё можно с Вами связаться:</label>
+            <input type="text" id="field4">
+        </div>
+        
+        <div class="form-group">
+            <label id="style-label">Стиль текста:</label>
+            <select id="text-style">
+                <option value="arial-red">Arial - Красный</option>
+                <option value="times-blue">Times New Roman - Синий</option>
+                <option value="courier-green">Courier New - Зеленый</option>
+            </select>
+        </div>
+        
+        <div class="buttons">
+            <button id="btn-show">Показать данные</button>
+        </div>
+    </section>
+
+    <aside>
+        <h3 id="aside-title">Дополнительная информация</h3>
+        <div class="advertisement">
+            <p id="ad1">Специальное предложение для наших клиентов!</p>
+            <p id="ad2">Если Вы впервые пользуетесь нашими услугами, то получите скидку 15% на сумму заказа от 30 руб.</p>
+        </div>
+        <div class="advertisement">
+            <p id="ad3">Что новенького:</p>
+            <p id="ad4">В меню появились новые позиции.</p>
+        </div>
+    </aside>
+
+    <footer>
+        <p id="footer-text">&copy; Yummi: Всегда вкусно.</p>
+        <p>Контактная информация: yummi@mya.com</p>
+    </footer>
+    
+    <script src="lab3.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fbd2ff;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "section aside"
+        "footer footer";
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    grid-area: header;
+    background-color: #e37fd6;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #f8f7f7;
+    position: relative;
+}
+
+.language-switcher {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.lang-btn {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #7e0f8a;
+    border: none;
+    border-radius: 3px;
+}
+
+.lang-btn.active {
+    background-color: #cd0aac;
+    color: white;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #b191b9;
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #292626;
+    font-weight: bold;
+}
+
+section {
+    grid-area: section;
+    padding: 20px;
+    background-color: #e3a2eb;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+aside {
+    grid-area: aside;
+    padding: 20px;
+    background-color: #774280;
+    border: 1px solid #ead1ef;
+    border-radius: 5px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #340e32;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+input[type="text"]:focus {
+    background-color: #f0f8ff;
+    border: 2px solid #4a90e2;
+    outline: none;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: #721c85;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #b30054;
+}
+
+.arial {
+    font-family: Arial, sans-serif;
+}
+
+.times {
+    font-family: "Times New Roman", serif;
+}
+
+.courier {
+    font-family: "Courier New", monospace;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: rgb(4, 92, 4);
+}
+
+.advertisement {
+    background-color: #d5c1d7;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}

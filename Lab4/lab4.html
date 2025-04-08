@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опрос телепредпочтений</title>
+    <link rel="stylesheet" href="lab4.css">
+</head>
+<body>
+    <article>
+        <h1>Опрос телевизионных предпочтений</h1>
+        
+        <form id="surveyForm">
+            <div class="form-group">
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" name="name" required 
+                       pattern="[А-Яа-яЁёA-Za-z\s]{2,50}" 
+                       title="Имя должно содержать только буквы (от 2 до 50 символов)">
+                <div class="error" id="nameError"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Ваш email:</label>
+                <input type="email" id="email" name="email" required
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                       title="Введите корректный email">
+                <div class="error" id="emailError"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="birthWeek">Неделя вашего рождения:</label>
+                <input type="week" id="birthWeek" name="birthWeek">
+                <div class="error" id="weekError"></div>
+            </div>
+            
+            <div class="form-group">
+                <label>Любимые жанры (отметьте несколько):</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="genre1" name="genres" value="Комедии">
+                    <label for="genre1">Комедии</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="genre2" name="genres" value="Драмы">
+                    <label for="genre2">Драмы</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="genre3" name="genres" value="Детективы">
+                    <label for="genre3">Детективы</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="genre4" name="genres" value="Фантастика">
+                    <label for="genre4">Фантастика</label>
+                </div>
+                <div class="error" id="genresError"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="favChannel">Любимый канал:</label>
+                <select id="favChannel" name="favChannel" required>
+                    <option value="">-- Выберите канал --</option>
+                    <option value="Первый">Первый</option>
+                    <option value="Россия 1">Россия 1</option>
+                    <option value="НТВ">НТВ</option>
+                    <option value="СТС">СТС</option>
+                    <option value="ТНТ">ТНТ</option>
+                </select>
+                <div class="error" id="channelError"></div>
+            </div>
+            
+            <div class="form-group">
+                <label>Как часто смотрите телевизор?</label>
+                <div class="radio-group">
+                    <input type="radio" id="freq1" name="frequency" value="Ежедневно" required>
+                    <label for="freq1">Ежедневно</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="freq2" name="frequency" value="Несколько раз в неделю">
+                    <label for="freq2">Несколько раз в неделю</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="freq3" name="frequency" value="Редко">
+                    <label for="freq3">Редко</label>
+                </div>
+                <div class="error" id="frequencyError"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="comments">Ваши пожелания телеканалам:</label>
+                <textarea id="comments" name="comments" maxlength="500"></textarea>
+                <div class="error" id="commentsError"></div>
+            </div>
+            
+            <div class="buttons">
+                <button type="submit" id="submitBtn">Отправить опрос</button>
+                <button type="button" id="clearBtn">Очистить форму</button>
+                <button type="button" id="viewResultsBtn">Посмотреть результат</button>
+            </div>
+        </form>
+    </article>
+
+     <div id="resultsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Результаты вашего опроса</h2>
+            <div id="modalResultsContent"></div>
+            <div class="datalist-container">
+                <label for="usersList">Другие участники опроса:</label>
+                <input list="users" id="usersList" placeholder="Выберите имя">
+                <datalist id="users"></datalist>
+            </div>
+        </div>
+    </div>
+
+    <script src="lab4.js"></script>
+</body>
+</html>
